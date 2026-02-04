@@ -156,6 +156,10 @@ a.link-secondary:hover {
   background-color: var(--color-primary) !important;
 }
 
+/* .icon {
+  color: white !important;
+} */
+
 html {
   margin: 0;
   padding: 0;
@@ -178,4 +182,38 @@ body {
 
 .temp_div {
   height: 4000px;
+}
+
+/* topbar */
+
+.topbar {
+  background-color: var(--color-primary);
+  height: 40px;
+  text-align: center;
+  color: white;
+}
+
+.topbar_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.truck__logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.truck__logo-container svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+}
+
+.truck__logo-container p {
+  font-size: 14px;
+  line-height: 1.25rem;
 }
