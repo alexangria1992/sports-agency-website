@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+button {
+  background: transparent;
+  border: none;
+}
+
 :root {
   --font-primary: 'Teko', sans-serif;
   --font-secondary: 'Poppins', sans-serif;
@@ -19,6 +24,7 @@
   --color-grey-300: #b0b0b0;
   --color-grey-400: #6d6d6d;
   --color-grey-500: #4f4f4f;
+  --color-primary-90: #252525e6;
 }
 
 /* LINKS */
@@ -27,6 +33,11 @@ a.link-primary {
   text-transform: uppercase;
   font-weight: 600;
   transition: all 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 a.link-secondary {
@@ -39,12 +50,44 @@ a.link-secondary:hover {
 
 /* CONTAINER */
 .container {
+  width: 100%;
+  margin-inline: auto;
   padding-inline: 1rem; /* px-4 */
 }
 
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
 @media (min-width: 1024px) {
   .container {
+    max-width: 1024px;
     padding-inline: 0; /* lg:px-0 */
+  }
+}
+
+/* xl */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
   }
 }
 
@@ -174,7 +217,7 @@ body {
 
 .page {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1440px;
   margin-inline: auto;
   overflow: hidden;
   background: white;
@@ -216,4 +259,108 @@ body {
 .truck__logo-container p {
   font-size: 14px;
   line-height: 1.25rem;
+}
+
+/* Header Styles */
+
+.header {
+  max-width: 1440px;
+  margin-inline: auto;
+  left: 0;
+  right: 0;
+  /* background-color: lime; */
+}
+
+.header_container {
+  margin-inline: auto;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    position: absolute;
+  }
+}
+
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 40px;
+}
+
+.navigation {
+  display: none;
+}
+
+.logo_sidebar_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 32px;
+}
+
+.search {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 360px;
+}
+
+.link-primary:hover {
+  color: var(--color-accent2);
+}
+
+.search_input {
+  width: 126px;
+  transition: all 150ms ease;
+  padding-left: 27px;
+}
+
+.search_input:focus {
+  width: 200px;
+}
+
+.icon-heart {
+  color: var(--color-primary);
+}
+
+.btn-icon:hover .icon-heart {
+  color: var(--color-primary-90);
+}
+
+.icon-cart {
+  color: var(--color-primary);
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 768px) {
+  .search {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo_sidebar_wrapper {
+    width: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navigation {
+    display: flex;
+    gap: 32px;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: 96px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sidenav {
+    display: none;
+  }
 }
