@@ -364,3 +364,34 @@ body {
     display: none;
   }
 }
+
+/* LATEST SECTION */
+
+.latest {
+  margin-top: 24px;
+}
+
+.latest_container {
+  margin-inline: auto;
+}
+
+.latest_title {
+  width: max-content;
+  border-bottom: 2px solid;
+}
+
+.latest_link {
+  color: var(--color-accent2);
+}
+
+.latest_link:hover {
+  color: var(--color-primary);
+}
+
+.heading_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 72px;
+}
