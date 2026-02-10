@@ -100,6 +100,11 @@ a.link-secondary:hover {
 .h6 {
   font-family: var(--font-primary);
   color: var(--color-primary);
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 .h1 {
@@ -394,4 +399,60 @@ body {
   align-items: center;
 
   margin-bottom: 72px;
+}
+
+/* HERO */
+.hero {
+  background-color: #f6f6f6;
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    height: 1064px;
+  }
+}
+
+/* SLIDER */
+
+.slide {
+  height: 530px;
+}
+
+.swiper-slide {
+  user-select: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.product-media {
+  background: var(--color-grey-50);
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-info {
+  width: 100%;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 46px; /* 👈 this is what you're missing */
+}
+
+.product-title {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
+.price {
+  color: var(--color-accent2);
+  font-weight: 600;
+}
+
+.swiper-scrollbar {
+  margin-top: 16px;
 }
