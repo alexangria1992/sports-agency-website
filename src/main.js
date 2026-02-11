@@ -4,6 +4,32 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Scrollbar } from 'swiper/modules';
 
+// mobile nav
+const menuBtn = document.getElementById('menuBtn');
+const sheet = document.getElementById('sheet');
+const closeBtn = document.getElementById('sheetClose');
+const overlay = document.getElementById('sheetOverlay');
+
+menuBtn.addEventListener('click', () => {
+  sheet.classList.add('is-open');
+  console.log('opened');
+});
+
+closeBtn.addEventListener('click', () => {
+  sheet.classList.remove('is-open');
+  console.log('closed');
+});
+
+function closeSheet() {
+  sheet.classList.remove('is-open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && sheet.classList.contains('is-open')) closeSheet();
+});
+overlay.addEventListener('click', closeSheet);
 // data
 
 const products = [
@@ -127,10 +153,5 @@ new Swiper('.swiper', {
     1170: {
       slidesPerView: 4,
     },
-  },
-
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true,
   },
 });

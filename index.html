@@ -44,19 +44,57 @@
       <header class="header">
         <div class="container header_container">
           <div class="header_wrapper">
-            <!-- Logo & sidenav -->
-            <div class="logo_sidebar_wrapper">
-              <a href="/">
+            <!-- LEFT: logo + menu -->
+            <div class="header_left">
+              <a href="/" class="logo_link">
                 <img
                   src="/assets/logo.svg"
-                  width="226px"
-                  height="48px"
+                  width="226"
+                  height="48"
                   alt="Venoma Logo"
-                  class="logo"
                 />
               </a>
-              <div class="sidenav">
-                <div>sidenav</div>
+            </div>
+
+            <div id="sheet">
+              <div id="sheetOverlay"></div>
+
+              <div id="sheetPanel">
+                <div class="sheetHeader">
+                  <button id="sheetClose" type="button" class="sheetClose">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 close-icon"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18 18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                  <div class="sheetContent">
+                    <div class="sheetLogoWrap">
+                      <img
+                        src="/assets/logo-white.svg"
+                        alt="Venoma"
+                        class="sheetLogo"
+                      />
+                    </div>
+                    <nav class="mobile-navigation">
+                      <a href="" class="link-primary">Men</a>
+                      <a href="" class="link-primary">Women</a>
+
+                      <a href="" class="link-primary">Kids</a>
+
+                      <a href="" class="link-primary">Sale</a>
+                    </nav>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- nav (desktop) -->
@@ -68,6 +106,24 @@
 
               <a href="" class="link-primary">Sale</a>
             </nav>
+            <div class="header_right">
+              <button id="menuBtn" type="button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="menu-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </button>
+            </div>
             <!-- search, favorites, cart -->
             <div class="search">
               <!-- search -->
